@@ -9,7 +9,7 @@
     position: relative;
 }
 
-#CookielawBanner a {
+#CookielawBanner #CookielawCross {
     background: url('../img/close.png') no-repeat 0 0;
     cursor: pointer;
     display: block;
