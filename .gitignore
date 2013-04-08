@@ -1,5 +1,7 @@
 *.pyc
 
 _build/
+dist/
+django_cookie_law.egg-info/
 
 .idea/
