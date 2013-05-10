@@ -1,3 +1,5 @@
+import time
+
 from django.test import LiveServerTestCase
 from django.utils.translation import ugettext as _
 from selenium import webdriver
@@ -33,6 +35,14 @@ class FunctionalTest(LiveServerTestCase):
         self.assertRaises(NoSuchElementException,
             lambda: self.browser.find_element_by_id('CookielawBanner'))
 
-        # now, with jQuery
+        self.browser.delete_cookie('cookielaw_accepted')
 
-        self.fail('finish test')
+        # now, with jQuery
+        self.browser.get('http://localhost:8081/?jquery=1')
+        cookielaw_banner = self.browser.find_element_by_id('CookielawBanner')
+
+        # on click of the button, cookie set and banner hidden
+        cookielaw_banner.find_element_by_class_name('btn').click()
+        time.sleep(1)
+        self.assertFalse(cookielaw_banner.is_displayed())
+        self.assertEqual(self.browser.get_cookie('cookielaw_accepted')['value'], '1')
