@@ -1,11 +1,9 @@
 #CookielawBanner {
-    background: #F2F2F2;
+    background: #fff;
     padding: 15px 0;
 }
 
 #CookielawBanner .container {
-    width: 960px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -18,14 +16,4 @@
     right: 0;
     width: 15px;
     height: 15px;
-}
-
-#CookielawBanner p {
-    color: #767676;
-}
-
-#CookielawBanner h6 {
-    color: #E9028C;
-    font-size: 125%;
-    margin: 0 0 15px;
 }
