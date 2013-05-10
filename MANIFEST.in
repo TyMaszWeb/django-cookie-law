@@ -1,0 +1,6 @@
+include LICENSE.rst
+include README.rst
+
+recursive-include cookielaw/locale *
+recursive-include cookielaw/static *
+recursive-include cookielaw/templates *
