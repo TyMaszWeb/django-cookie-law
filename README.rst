@@ -2,6 +2,8 @@
 django-cookie-law
 ==================
 
+.. image:: https://travis-ci.org/TyMaszWeb/django-cookie-law.png?branch=master
+
 django-cookie-law helps your Django project comply with the
 `EU cookie regulations <http://www.aboutcookies.org/default.aspx?page=3>`_.
 by displaying a cookie information banner until it is dismissed by the user.
