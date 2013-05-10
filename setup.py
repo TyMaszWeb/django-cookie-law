@@ -32,6 +32,7 @@ setup(
     classifiers=CLASSIFIERS,
     install_requires=[
         'Django>=1.2',
+        'django-classy-tags>=0.3.0',
     ],
     tests_require=[
     ],
