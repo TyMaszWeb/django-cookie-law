@@ -4,17 +4,13 @@ django-cookie-law
 
 django-cookie-law helps your Django project comply with the
 `EU cookie regulations <http://www.aboutcookies.org/default.aspx?page=3>`_.
+by displaying a cookie information banner until it is dismissed by the user.
 
-At the moment this application just displays cookie information banner until it is
-dismissed by the user. There are future plans to allow user to choose whether
-he wants to continue browsing the site using cookies or browse the site in
-cookieless mode.
-
-.. warning:: Above means the app can be incompatible with your local cookie
-             law regulations. Consult your lawyer.
+.. warning:: The app can be incompatible with your local cookie
+             law regulations. Consult your lawyer when in doubt.
 
 Contributions and comments are welcome using Github at:
-http://github.com/centralniak/django-cookie-law
+http://github.com/TyMaszWeb/django-cookie-law
 
 Please note that django-cookie-law requires:
 
@@ -58,11 +54,8 @@ Configuration
 
 If you want to use our default template, add ``cookielaw/css/cookielaw.css`` to
 the markup and you should see the cookie law banner at the top of the page until
-you dismiss it with the cross icon in the top-right. Chances are, you'll like
-to change the text and/or CSS.
-
-.. note:: The default template will change to a
-`Twitter Bootstrap <http://twitter.github.io/bootstrap/>`_ compatible one.
+you dismiss it with the button in the top-right. This CSS is Twitter Bootstrap
+compatible, but chances are, you'll like to adjust it anyway.
 
 To change the markup, just add a template named ``cookielaw/banner.html`` and
 make sure it is loaded before the default template (for example put the
@@ -70,8 +63,8 @@ make sure it is loaded before the default template (for example put the
 ``django.template.loaders.app_directories.Loader`` and add your new template
 to any of the ``TEMPLATE_DIRS``).
 
-To change the CSS, just write your own rules and don't like the default
-stylesheet anywhere.
+To change the CSS, just write your own rules and don't include the default
+stylesheet.
 
 Bugs & Contribution
 ===================
