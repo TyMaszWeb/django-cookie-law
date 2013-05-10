@@ -29,6 +29,7 @@ def main():
             'django.contrib.messages.context_processors.messages'
         ),
         ROOT_URLCONF = 'cookielaw.test_project.urls',
+        STATIC_URL = '/static/',
     )
     management.execute_from_command_line(['', 'test', 'cookielaw',])
     sys.exit()

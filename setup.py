@@ -34,6 +34,9 @@ setup(
         'Django>=1.2',
         'django-classy-tags>=0.3.0',
     ],
+    test_require=[
+        'selenium>=2.32.0',
+    ],
     packages=find_packages(),
     include_package_data=False,
     zip_safe = False,
