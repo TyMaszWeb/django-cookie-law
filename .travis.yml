@@ -5,6 +5,8 @@ python:
 env:
   - DJANGO_VERSION=1.4.5
   - DJANGO_VERSION=1.5.1
+before_install:
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 install:
   - pip install Django==$DJANGO_VERSION django-classy-tags>=0.3.0 selenium
 script:
