@@ -30,7 +30,7 @@ package_data_globs = (
 package_data = []
 for f in chain(*map(glob, package_data_globs)):
     package_data.append(f.split('/', 1)[1])
-import pdb; pdb.set_trace();
+
 setup(
     author='Piotr Kilczuk',
     author_email='piotr@tymaszweb.pl',
