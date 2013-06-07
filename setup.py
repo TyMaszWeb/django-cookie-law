@@ -2,6 +2,8 @@
 
 import os
 from setuptools import setup, find_packages
+from itertools import chain
+from glob import glob
 
 import cookielaw
 
@@ -18,6 +20,12 @@ CLASSIFIERS = [
     'Topic :: Internet :: WWW/HTTP',
     'Topic :: Internet :: WWW/HTTP :: Session',
 ]
+
+package_data_globs = (
+    'templates/cookielaw/*.html',
+    'static/cookielaw/*/*',
+    'locale/*/*/*'
+)
 
 setup(
     author='Piotr Kilczuk',
@@ -38,6 +46,7 @@ setup(
         'selenium>=2.32.0',
     ],
     packages=find_packages(),
+    package_data={'cookielaw': list(chain(*map(glob, paths)))},
     include_package_data=False,
     zip_safe = False,
     test_suite = 'runtests.main',
