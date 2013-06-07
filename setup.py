@@ -22,11 +22,15 @@ CLASSIFIERS = [
 ]
 
 package_data_globs = (
-    'templates/cookielaw/*.html',
-    'static/cookielaw/*/*',
-    'locale/*/*/*'
+    'cookielaw/templates/cookielaw/*.html',
+    'cookielaw/static/cookielaw/*/*',
+    'cookielaw/locale/*/*/*'
 )
 
+package_data = []
+for f in chain(*map(glob, package_data_globs)):
+    package_data.append(f.split('/', 1)[1])
+import pdb; pdb.set_trace();
 setup(
     author='Piotr Kilczuk',
     author_email='piotr@tymaszweb.pl',
@@ -46,7 +50,7 @@ setup(
         'selenium>=2.32.0',
     ],
     packages=find_packages(),
-    package_data={'cookielaw': list(chain(*map(glob, paths)))},
+    package_data={'cookielaw': package_data},
     include_package_data=False,
     zip_safe = False,
     test_suite = 'runtests.main',
