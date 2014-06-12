@@ -46,12 +46,12 @@ setup(
         'Django>=1.2',
         'django-classy-tags>=0.3.0',
     ],
-    test_require=[
+    tests_require=[
         'selenium>=2.32.0',
     ],
     packages=find_packages(),
     package_data={'cookielaw': package_data},
     include_package_data=False,
-    zip_safe = False,
-    test_suite = 'runtests.main',
+    zip_safe=False,
+    test_suite='runtests.main',
 )
