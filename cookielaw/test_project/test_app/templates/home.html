@@ -1,4 +1,5 @@
 {% load cookielaw_tags %}
+{% load staticfiles %}
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,8 +8,8 @@
     {% if request.GET.jquery %}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     {% endif %}
-    <script type="text/javascript" src="{{ STATIC_URL }}cookielaw/js/cookielaw.js"></script>
-    <style type="text/css" src="{{ STATIC_URL }}cookielaw/css/cookielaw.css"></style>
+    <script type="text/javascript" src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+    <style type="text/css" src="{% static 'cookielaw/css/cookielaw.css' %}"></style>
 </head>
 <body>
     {% cookielaw_banner %}
