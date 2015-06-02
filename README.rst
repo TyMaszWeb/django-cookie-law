@@ -16,7 +16,8 @@ http://github.com/TyMaszWeb/django-cookie-law
 
 Please note that django-cookie-law requires:
 
-- Django >= 1.2
+- Python 2.6+ (Python 3 is of course fully supported)
+- Django >= 1.2 but only >=1.4 is officially supported and integration-tested
 - django-classy-tags >= 0.3.0
 
 Installation
@@ -67,6 +68,11 @@ to any of the ``TEMPLATE_DIRS``).
 
 To change the CSS, just write your own rules and don't include the default
 stylesheet.
+
+Changelog
+=========
+
+* **1.0.3** Django 1.4 through 1.8 supported officially and integration-tested
 
 Bugs & Contribution
 ===================

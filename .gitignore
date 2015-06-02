@@ -1,8 +1,10 @@
 *.pyc
 
 _build/
+.eggs/
 _env/
 dist/
 django_cookie_law.egg-info/
+.tox/
 
 .idea/

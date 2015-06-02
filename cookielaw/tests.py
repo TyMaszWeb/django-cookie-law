@@ -3,13 +3,15 @@ import time
 from django.test import LiveServerTestCase
 from django.utils.translation import ugettext as _
 from selenium import webdriver
+from selenium.webdriver.firefox import firefox_binary
 from selenium.common.exceptions import *
 
 
 class FunctionalTest(LiveServerTestCase):
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        fx_bin = firefox_binary.FirefoxBinary(log_file=open('/tmp/cookielaw-selenium.log', 'w'))
+        self.browser = webdriver.Firefox(firefox_binary=fx_bin)
         self.browser.implicitly_wait(3)
 
     def tearDown(self):

@@ -48,6 +48,7 @@ setup(
     ],
     tests_require=[
         'selenium>=2.32.0',
+        'tox>=1.4.3',
     ],
     packages=find_packages(),
     package_data={'cookielaw': package_data},

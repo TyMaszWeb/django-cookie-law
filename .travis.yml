@@ -1,14 +1,33 @@
 language: python
+
 python:
   - "2.6"
   - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "pypy"
+
 env:
-  - DJANGO_VERSION=1.4.20
-  - DJANGO_VERSION=1.5.12
+  - DJANGO="Django<1.5"
+  - DJANGO="Django<1.6"
+#  - DJANGO="Django<1.7"
+#  - DJANGO="Django<1.8"
+#  - DJANGO="Django<1.9"
+
+matrix:
+  exclude:
+    - python: "3.2"
+      env: DJANGO="Django<1.5"
+    - python: "3.3"
+      env: DJANGO="Django<1.5"
+    - python: "3.4"
+      env: DJANGO="Django<1.5"
+
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+
 install:
-  - pip install Django==$DJANGO_VERSION django-classy-tags>=0.3.0 selenium
-script:
+  - pip install $DJANGO django-classy-tags selenium
   - python setup.py test

@@ -8,17 +8,17 @@ from django.core import management
 
 def main():
     settings.configure(
-        DATABASES = {
+        DATABASES={
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
             }
         },
-        INSTALLED_APPS = (
+        INSTALLED_APPS=(
             'django.contrib.staticfiles',
             'cookielaw',
             'cookielaw.test_project.test_app',
         ),
-        TEMPLATE_CONTEXT_PROCESSORS = (
+        TEMPLATE_CONTEXT_PROCESSORS=(
             'django.contrib.auth.context_processors.auth',
             'django.core.context_processors.debug',
             'django.core.context_processors.i18n',
@@ -31,5 +31,6 @@ def main():
         ROOT_URLCONF = 'cookielaw.test_project.urls',
         STATIC_URL = '/static/',
     )
+
     management.execute_from_command_line(['', 'test', 'cookielaw',])
     sys.exit()
