@@ -68,6 +68,11 @@ to any of the ``TEMPLATE_DIRS``).
 To change the CSS, just write your own rules and don't include the default
 stylesheet.
 
+Changelog
+=========
+
+* **1.0.3** added Italian translation thanks to Jiloc_
+
 Bugs & Contribution
 ===================
 
@@ -76,3 +81,5 @@ http://github.com/TyMaszWeb/django-cookie-law
 
 :author: Piotr Kilczuk
 :date: 2013/04/08
+
+.. _Jiloc: https://github.com/Jiloc
