@@ -18,6 +18,6 @@ class CookielawBanner(InclusionTag):
         if context['request'].COOKIES.get('cookielaw_accepted', False):
             return ''
         data = self.get_context(context, **kwargs)
-        return render_to_string(template, data)
+        return render_to_string(template, data, context_instance=context)
 
 register.tag(CookielawBanner)
