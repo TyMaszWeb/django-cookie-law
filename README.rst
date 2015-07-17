@@ -71,6 +71,7 @@ stylesheet.
 Changelog
 =========
 
+* **1.0.5** added Dutch translation thanks to douwevandermeij_
 * **1.0.4** context_instance is now passed to the banner template
 * **1.0.3** added Italian translation thanks to Jiloc_
 
@@ -83,4 +84,5 @@ http://github.com/TyMaszWeb/django-cookie-law
 :author: Piotr Kilczuk
 :date: 2013/04/08
 
+.. _douwevandermeij: https://github.com/douwevandermeij
 .. _Jiloc: https://github.com/Jiloc
