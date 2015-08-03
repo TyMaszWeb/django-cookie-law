@@ -14,10 +14,10 @@ class CookielawBanner(InclusionTag):
     template = 'cookielaw/banner.html'
 
     def render_tag(self, context, **kwargs):
-        template = self.get_template(context, **kwargs)
+        template_filename = self.get_template(context, **kwargs)
         if context['request'].COOKIES.get('cookielaw_accepted', False):
             return ''
         data = self.get_context(context, **kwargs)
-        return render_to_string(template, data, context_instance=context)
+        return render_to_string(template_filename, data, context_instance=context)
 
 register.tag(CookielawBanner)
