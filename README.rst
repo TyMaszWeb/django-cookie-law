@@ -72,8 +72,8 @@ stylesheet.
 Changelog
 =========
 
-* **1.0.6** `django.core.context_processors.request` is still required but if not available in template context a
-  warning will be raise instead of a `KeyError`
+* **1.0.6** ``django.core.context_processors.request`` is still required but if not available in template context a
+  warning will be raise instead of a ``KeyError``
 * **1.0.5** added Dutch translation thanks to douwevandermeij_
 * **1.0.4** context_instance is now passed to the banner template
 * **1.0.3** added Italian translation thanks to Jiloc_
