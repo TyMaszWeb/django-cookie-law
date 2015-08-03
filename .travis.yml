@@ -6,6 +6,7 @@ python:
 env:
   - DEPS='Django<1.5'
   - DEPS='Django<1.6'
+  - DEPS='Django<1.7'
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
