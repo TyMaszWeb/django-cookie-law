@@ -2,7 +2,8 @@
 django-cookie-law
 ==================
 
-.. image:: https://travis-ci.org/TyMaszWeb/django-cookie-law.png?branch=master
+.. image:: https://travis-ci.org/TyMaszWeb/django-cookie-law.svg?branch=master
+   :target: https://travis-ci.org/TyMaszWeb/django-cookie-law
 
 django-cookie-law helps your Django project comply with the
 `EU cookie regulations <http://www.aboutcookies.org/default.aspx?page=3>`_.
@@ -72,7 +73,7 @@ Changelog
 =========
 
 * **1.0.6** `django.core.context_processors.request` is still required but if not available in template context a
-            warning will be raise instead of a `KeyError`
+  warning will be raise instead of a `KeyError`
 * **1.0.5** added Dutch translation thanks to douwevandermeij_
 * **1.0.4** context_instance is now passed to the banner template
 * **1.0.3** added Italian translation thanks to Jiloc_
