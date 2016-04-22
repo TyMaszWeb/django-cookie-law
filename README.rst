@@ -72,6 +72,7 @@ stylesheet.
 Changelog
 =========
 
+* **1.0.7** added Russian translation thanks to paschembri_
 * **1.0.6** ``django.core.context_processors.request`` is still required but if not available in template context a
   warning will be raise instead of a ``KeyError``
 * **1.0.5** added Dutch translation thanks to douwevandermeij_
@@ -89,3 +90,4 @@ http://github.com/TyMaszWeb/django-cookie-law
 
 .. _douwevandermeij: https://github.com/douwevandermeij
 .. _Jiloc: https://github.com/Jiloc
+.. _paschembri: https://github.com/paschembri
