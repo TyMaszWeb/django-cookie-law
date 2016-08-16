@@ -33,7 +33,7 @@ def main():
             'django.contrib.messages.context_processors.messages'
         ),
         ROOT_URLCONF = 'cookielaw.test_project.urls',
-        STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'temp'),
+        STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'cookielaw', 'static'),
         STATIC_URL = '/static/',
     )
     management.execute_from_command_line(['', 'test', 'cookielaw',])

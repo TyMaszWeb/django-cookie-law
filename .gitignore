@@ -5,6 +5,5 @@ _build/
 _env/
 dist/
 django_cookie_law.egg-info/
-temp/
 
 .idea/
