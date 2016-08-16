@@ -47,7 +47,7 @@ setup(
         'django-classy-tags>=0.3.0',
     ],
     tests_require=[
-        'selenium>=2.32.0',
+        'selenium==2.53.6',
     ],
     packages=find_packages(),
     package_data={'cookielaw': package_data},
