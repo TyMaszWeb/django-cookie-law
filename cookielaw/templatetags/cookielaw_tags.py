@@ -1,4 +1,5 @@
 import warnings
+import django
 
 from classytags.helpers import InclusionTag
 from django import template
@@ -26,6 +27,10 @@ class CookielawBanner(InclusionTag):
             return ''
 
         data = self.get_context(context, **kwargs)
-        return render_to_string(template_filename, data, context_instance=context)
+
+        if django.VERSION[:2] < (1, 10):
+            return render_to_string(template_filename, data, context_instance=context)
+        else:
+            return render_to_string(template_filename, data, context.request)
 
 register.tag(CookielawBanner)
