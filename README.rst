@@ -72,6 +72,7 @@ stylesheet.
 Changelog
 =========
 
+* **1.0.9** added unofficial support for Django 1.10 thansk to farin_
 * **1.0.8** added Spanish translation thanks to jonashagstedt_
 * **1.0.7** added Russian translation thanks to paschembri_
 * **1.0.6** ``django.core.context_processors.request`` is still required but if not available in template context a
@@ -90,6 +91,7 @@ http://github.com/TyMaszWeb/django-cookie-law
 :date: 2013/04/08
 
 .. _douwevandermeij: https://github.com/douwevandermeij
+.. _farin: https://github.com/farin
 .. _Jiloc: https://github.com/Jiloc
 .. _jonashagstedt: https://github.com/jonashagstedt
 .. _paschembri: https://github.com/paschembri
