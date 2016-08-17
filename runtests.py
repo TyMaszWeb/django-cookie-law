@@ -63,7 +63,7 @@ def main():
                     'APP_DIRS': True,
                 },
             ],
-            ROOT_URLCONF = 'cookielaw.test_project.urls',
+            ROOT_URLCONF = 'cookielaw.test_project.urls_2',
             STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'cookielaw', 'static'),
             STATIC_URL = '/static/',
         )
