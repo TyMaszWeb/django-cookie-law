@@ -18,7 +18,7 @@ msgstr ""
 
 #: templates/cookielaw/banner.html:5
 msgid "COOKIE_INFO_HEADER"
-msgstr "Cookies disclaimer"
+msgstr "Aviso de cookies"
 
 #: templates/cookielaw/banner.html:7
 msgid "COOKIE_INFO_OK"
@@ -27,4 +27,6 @@ msgstr "Estoy de acuerdo"
 #: templates/cookielaw/banner.html:8
 msgid "COOKIE_INFO_PARA"
 msgstr ""
-"utilizamos cookies para mejorar la experiencia de navegación del usuario y para estudiar cómo se utiliza nuestro sitio web. si navega por nuestro sitio web, estará aceptando el uso de las cookies en las condiciones establecidas en la presente política de cookies. esta política puede ser actualizada, por lo que le invitamos a revisarla de forma regular"
+"Utilizamos cookies para mejorar la experiencia de navegación del usuario y para estudiar cómo se utiliza nuestro sitio web.
+Si navega por nuestro sitio web, estará aceptando el uso de las cookies en las condiciones establecidas en la presente política de cookies.
+Esta política puede ser actualizada, por lo que le invitamos a revisarla de forma regular"
