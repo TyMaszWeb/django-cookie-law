@@ -81,6 +81,9 @@ Changelog
 * **1.0.4** context_instance is now passed to the banner template
 * **1.0.3** added Italian translation thanks to Jiloc_
 
+Some very minor changes have not been listed.
+
+
 Bugs & Contribution
 ===================
 
