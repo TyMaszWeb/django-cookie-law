@@ -27,6 +27,6 @@ msgstr "Estoy de acuerdo"
 #: templates/cookielaw/banner.html:8
 msgid "COOKIE_INFO_PARA"
 msgstr ""
-"Utilizamos cookies para mejorar la experiencia de navegación del usuario y para estudiar cómo se utiliza nuestro sitio web.
-Si navega por nuestro sitio web, estará aceptando el uso de las cookies en las condiciones establecidas en la presente política de cookies.
-Esta política puede ser actualizada, por lo que le invitamos a revisarla de forma regular"
+"Utilizamos cookies para mejorar la experiencia de navegación del usuario y para estudiar cómo se utiliza nuestro sitio web."
+"Si navega por nuestro sitio web, estará aceptando el uso de las cookies en las condiciones establecidas en la presente política de cookies."
+"Esta política puede ser actualizada, por lo que le invitamos a revisarla de forma regular"
