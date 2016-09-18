@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-18 15:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/cookielaw/banner.html:5 tests.py:24
+msgid "COOKIE_INFO_HEADER"
+msgstr "Avís de cookies"
+
+#: templates/cookielaw/banner.html:7 tests.py:26
+msgid "COOKIE_INFO_OK"
+msgstr "Estic d'acord"
+
+#: templates/cookielaw/banner.html:8 tests.py:25
+msgid "COOKIE_INFO_PARA"
+msgstr ""
+"Aquesta plana web guarda petits fragments d'informació (cookies) en el vostre dispositiu amb la finalitat d'oferir "
+"un millor contingut i per a finalitats estadístiques. Vostè pot desactivar l'ús de cookies modificant la "
+"configuració del seu navegador. Navegar per la nostra plana web sense canviar la configuració del navegador fa que "
+"vostè ens està autoritzant a emmagatzemar aquesta informació en el seu dispositiu."
