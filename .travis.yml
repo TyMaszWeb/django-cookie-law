@@ -38,11 +38,16 @@ matrix:
     - env: DEPS='Django<1.9'
       python: "2.6"
 before_install:
+  - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux32.zip"
+  - "unzip chromedriver_linux32.zip -d $HOME"
   - "export DISPLAY=:99.0"
+  - "export PATH=$HOME:$PATH"
   - "sh -e /etc/init.d/xvfb start"
   - "sleep 3"
 install:
   - pip install $DEPS
   - python setup.py develop
 script:
-  - python setup.py test
+  - "echo $PATH"
+  - "which chromedriver"
+  - "python setup.py test"
