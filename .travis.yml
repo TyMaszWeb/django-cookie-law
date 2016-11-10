@@ -1,4 +1,5 @@
-sudo: false
+sudo: required
+dist: trusty
 language: python
 python:
   - "2.6"
@@ -38,16 +39,18 @@ matrix:
     - env: DEPS='Django<1.9'
       python: "2.6"
 before_install:
-  - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux32.zip"
-  - "unzip chromedriver_linux32.zip -d $HOME"
+  - "apt-cache search google-chrome"
+  - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip"
+  - "unzip chromedriver_linux64.zip -d /home/travis/bin"
+  - "sudo apt-get update"
+  - "sudo apt-get install -y libappindicator1 fonts-liberation"
+  - "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+  - "sudo dpkg -i google-chrome*.deb"
   - "export DISPLAY=:99.0"
-  - "export PATH=$HOME:$PATH"
   - "sh -e /etc/init.d/xvfb start"
   - "sleep 3"
 install:
   - pip install $DEPS
   - python setup.py develop
 script:
-  - "echo $PATH"
-  - "which chromedriver"
   - "python setup.py test"
