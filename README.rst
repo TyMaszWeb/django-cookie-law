@@ -72,6 +72,7 @@ stylesheet.
 Changelog
 =========
 
+* **1.0.12** added German translation thanks to dated_
 * **1.0.11** added Catalan translation thanks to joansv_
 * **1.0.9** added unofficial support for Django 1.10 thanks to farin_
 * **1.0.8** added Spanish translation thanks to jonashagstedt_
@@ -94,6 +95,7 @@ http://github.com/TyMaszWeb/django-cookie-law
 :author: Piotr Kilczuk
 :date: 2013/04/08
 
+.. _dated: https://github.com/dated
 .. _douwevandermeij: https://github.com/douwevandermeij
 .. _farin: https://github.com/farin
 .. _Jiloc: https://github.com/Jiloc
