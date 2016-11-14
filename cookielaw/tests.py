@@ -1,3 +1,4 @@
+import logging
 import time
 
 from django.test import LiveServerTestCase
@@ -9,13 +10,19 @@ from selenium.common.exceptions import *
 class FunctionalTest(LiveServerTestCase):
 
     def setUp(self):
+        logging.debug('setUp')
+
         self.browser = webdriver.Chrome()
         self.browser.implicitly_wait(6)
 
     def tearDown(self):
+        logging.debug('tearDown')
+
         self.browser.quit()
 
     def test_banner_shows_and_hides_jquery(self):
+        logging.debug('test_banner_shows_and_hides_jquery')
+
         self.browser.get('http://localhost:8081/?jquery=1')
         cookielaw_banner = self.browser.find_element_by_id('CookielawBanner')
 
@@ -36,6 +43,8 @@ class FunctionalTest(LiveServerTestCase):
             lambda: self.browser.find_element_by_id('CookielawBanner'))
 
     def test_banner_shows_and_hides_no_jquery(self):
+        logging.debug('test_banner_shows_and_hides_no_jquery')
+
         self.browser.get('http://localhost:8081/')
         cookielaw_banner = self.browser.find_element_by_id('CookielawBanner')
 
