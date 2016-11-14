@@ -10,7 +10,7 @@ class FunctionalTest(LiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome()
-        self.browser.implicitly_wait(3)
+        self.browser.implicitly_wait(6)
 
     def tearDown(self):
         self.browser.quit()
