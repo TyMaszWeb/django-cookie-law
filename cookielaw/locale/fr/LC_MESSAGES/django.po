@@ -1,7 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# French translation for https://github.com/TyMaszWeb/django-cookie-law/.
+# Copyright (C) 2016 https://github.com/TyMaszWeb/
+# This file is distributed under the same license as the https://github.com/TyMaszWeb/django-cookie-law/ package.
+# Lilian Besson <naereen at crans dOt org>, 2016.
+# Cognat Laurent <laurent.cognat@netsach.fr>, 2015.
 #
 #, fuzzy
 msgid ""
@@ -9,8 +10,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-05 18:08+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: COGNAT LAURENT <laurent.cognat@netsach.fr>\n"
+"PO-Revision-Date: 2016-12-07 22:15+0200\n"
+"Last-Translator: Lilian Besson <naereen at crans dOt org>\n"
 "Language-Team: NETSACH <contact@netsach.fr>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: templates/cookielaw/banner.html:5
 msgid "COOKIE_INFO_HEADER"
-msgstr "Consentement d'utilisation des Cookies"
+msgstr "Consentement d'utilisation des cookies"
 
 #: templates/cookielaw/banner.html:7
 msgid "COOKIE_INFO_OK"
@@ -29,8 +30,8 @@ msgstr "J'accepte"
 msgid "COOKIE_INFO_PARA"
 msgstr ""
 "Notre site sauvegarde des traceurs textes (cookies) sur votre appareil afin "
-"de vous garantir de meilleurs contenus et à des fins de collectes statistiques."
+"de vous garantir de meilleurs contenus et à des fins de collectes statistiques. "
 "Vous pouvez désactiver l'usage des cookies en changeant les paramètres de votre "
 "navigateur. En poursuivant votre navigation sur notre site sans changer vos "
-"paramètres de navigateur vous nous accordez la permission de conserver des "
+"paramètres de navigateur, vous nous accordez la permission de conserver des "
 "informations sur votre appareil."
