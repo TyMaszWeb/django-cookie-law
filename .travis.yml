@@ -1,43 +1,26 @@
 sudo: required
 dist: trusty
 language: python
+# See: https://docs.djangoproject.com/en/1.9/faq/install/#what-python-version-can-i-use-with-django
 python:
-  - "2.6"
   - "2.7"
   - "3.2"
   - "3.3"
   - "3.4"
   - "3.5"
 env:
-  - DEPS='Django<1.5'
-  - DEPS='Django<1.6'
-  - DEPS='Django<1.7'
   - DEPS='Django<1.8'
   - DEPS='Django<1.9'
 matrix:
   exclude:
     - env: DEPS='Django<1.5'
       python: "3.2"
-    - env: DEPS='Django<1.5'
-      python: "3.3"
-    - env: DEPS='Django<1.5'
-      python: "3.4"
-    - env: DEPS='Django<1.5'
-      python: "3.5"
-    - env: DEPS='Django<1.6'
-      python: "3.4"
-    - env: DEPS='Django<1.6'
-      python: "3.5"
-    - env: DEPS='Django<1.7'
-      python: "3.4"
-    - env: DEPS='Django<1.7'
-      python: "3.5"
-    - env: DEPS='Django<1.8'
-      python: "2.6"
     - env: DEPS='Django<1.8'
       python: "3.5"
     - env: DEPS='Django<1.9'
-      python: "2.6"
+      python: "3.2"
+    - env: DEPS='Django<1.9'
+      python: "3.3"
 before_install:
   - "apt-cache search google-chrome"
   - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip"
