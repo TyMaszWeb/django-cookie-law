@@ -9,3 +9,8 @@ django_cookie_law.egg-info/
 .idea/
 
 geckodriver.log
+/.Python
+/bin
+/include
+/lib
+/pip-selfcheck.json
