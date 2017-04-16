@@ -28,6 +28,7 @@ Installation
 #. Run ``collectstatic`` (Django 1.3+) or copy the statics to your media directory
 #. Add ``cookielaw/js/cookielaw.js`` to the markup directly or via your asset
    manager such as ``django-pipeline`` or ``django-compressor``
+#. Add ``cookielaw`` to your ``INSTALLED_APPS``
 #. Enable ``'django.core.context_processors.request'`` in your
    ``TEMPLATE_CONTEXT_PROCESSORS`` setting, eg.:
 
