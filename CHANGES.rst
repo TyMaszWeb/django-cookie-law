@@ -4,6 +4,8 @@ Changelog
 1.1.0 (Unreleased)
 ------------------
 
+* Add support for Django 1.11
+* Add support for Django 1.10
 * Drop support for Django < 1.8 as it is no `longer officially supported <https://www.djangoproject.com/download/#supported-versions>`__.
 * Switch to pytest
 
