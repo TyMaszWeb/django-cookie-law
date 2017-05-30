@@ -49,9 +49,9 @@ setup(
     ],
     tests_require=[
         'six',
-        'pytest==3.0.7',
-        'pytest-django==3.1.2',
-        'pytest-selenium==1.9.1',
+        'pytest>=3.0.0',
+        'pytest-django>=3.1.2',
+        'pytest-selenium>=1.9.1',
         'selenium>=3.3.1',
     ],
     packages=find_packages(),
