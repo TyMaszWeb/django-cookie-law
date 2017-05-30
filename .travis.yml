@@ -8,11 +8,13 @@ python:
   - "3.5"
   - "3.6"
 env:
+  global:
+    - DJANGO_SETTINGS_MODULE=settings
   matrix:
-   - DJANGO="Django<1.9"
-   - DJANGO="Django<1.10"
-   - DJANGO="Django<1.11"
-   - DJANGO="Django<1.12"
+    - DJANGO="Django<1.9"
+    - DJANGO="Django<1.10"
+    - DJANGO="Django<1.11"
+    - DJANGO="Django<1.12"
 matrix:
   exclude:
     # See: https://docs.djangoproject.com/en/1.9/faq/install/#what-python-version-can-i-use-with-django
@@ -22,6 +24,9 @@ matrix:
       env: DJANGO="Django<1.11"
     - python: "3.3"
       env: DJANGO="Django<1.12"
+cache:
+  directories:
+    - $HOME/.cache/pip
 install:
   - pip install $DJANGO
   - python setup.py develop
