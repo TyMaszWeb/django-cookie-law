@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * Drop support for Django < 1.8 as it is no `longer officially supported <https://www.djangoproject.com/download/#supported-versions>`__.
+* Switch to pytest
 
 
 Prior 1.1

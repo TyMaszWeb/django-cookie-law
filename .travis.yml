@@ -1,39 +1,18 @@
 sudo: required
 dist: trusty
 language: python
-# See: https://docs.djangoproject.com/en/1.9/faq/install/#what-python-version-can-i-use-with-django
 python:
   - "2.7"
-  - "3.2"
   - "3.3"
   - "3.4"
   - "3.5"
 env:
-  - DEPS='Django<1.8'
-  - DEPS='Django<1.9'
+  matrix:
+   - DJANGO="Django<1.9"
 matrix:
   exclude:
-    - env: DEPS='Django<1.5'
-      python: "3.2"
-    - env: DEPS='Django<1.8'
-      python: "3.5"
-    - env: DEPS='Django<1.9'
-      python: "3.2"
-    - env: DEPS='Django<1.9'
-      python: "3.3"
-before_install:
-  - "apt-cache search google-chrome"
-  - "wget https://chromedriver.storage.googleapis.com/2.25/chromedriver_linux64.zip"
-  - "unzip chromedriver_linux64.zip -d /home/travis/bin"
-  - "sudo apt-get update"
-  - "sudo apt-get install -y libappindicator1 fonts-liberation"
-  - "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-  - "sudo dpkg -i google-chrome*.deb"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "sleep 3"
 install:
-  - pip install $DEPS
+  - pip install $DJANGO
   - python setup.py develop
 script:
-  - "python setup.py test"
+  - python setup.py test
