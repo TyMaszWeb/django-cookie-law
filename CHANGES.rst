@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.0 (Unreleased)
-------------------
+2.0.0
+-----
 
 * Add support for Django 1.11
 * Add support for Django 1.10
