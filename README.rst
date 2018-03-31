@@ -28,25 +28,9 @@ Installation
 #. Run ``collectstatic`` (Django 1.3+) or copy the statics to your media directory
 #. Add ``cookielaw/js/cookielaw.js`` to the markup directly or via your asset
    manager such as ``django-pipeline`` or ``django-compressor``
-#. Enable ``'django.core.context_processors.request'`` in your
-   ``TEMPLATE_CONTEXT_PROCESSORS`` setting, eg.:
+#. If you're using Django > 1.8, enable ``'django.core.context_processors.request'`` in your ``TEMPLATES['OPTIONS']`` setting, eg.:
 
     ::
-
-        TEMPLATE_CONTEXT_PROCESSORS = (
-            'django.contrib.auth.context_processors.auth',
-            'django.core.context_processors.debug',
-            'django.core.context_processors.i18n',
-            'django.core.context_processors.media',
-            'django.core.context_processors.request',
-            'django.core.context_processors.static',
-            'django.core.context_processors.tz',
-            'django.contrib.messages.context_processors.messages'
-        )
-
-or 
-
-   ::
 
          TEMPLATES = [
              {
@@ -68,9 +52,26 @@ or
              },
          ]
 
+If you're using an older version of Django (< 1.8) then you'll want to change the 
+``TEMPLATE_CONTEXT_PROCESSORS`` setting, eg.:
 
-   .. note:: If you don't have this setting defined, just add it to your
-             settings module.
+    ::
+
+          TEMPLATE_CONTEXT_PROCESSORS = (
+                  'django.contrib.auth.context_processors.auth',
+                  'django.core.context_processors.debug',
+                  'django.core.context_processors.i18n',
+                  'django.core.context_processors.media',
+                  'django.core.context_processors.request',
+                  'django.core.context_processors.static',
+                  'django.core.context_processors.tz',
+                  'django.contrib.messages.context_processors.messages'
+              )
+
+
+
+
+    .. note:: If you don't have this setting defined, just add it to your settings module.
 
 #. ``{% load cookielaw_tags %}`` and add ``{% cookielaw_banner %}`` template
    tag where you want to display the cookielaw banner. Best place for this is
