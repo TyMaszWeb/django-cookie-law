@@ -70,6 +70,7 @@ If you're using an older version of Django (< 1.8) then you'll want to change th
 
 
 
+    .. note:: N.b. versions below 1.8 are not officially supported.
 
     .. note:: If you don't have this setting defined, just add it to your settings module.
 
