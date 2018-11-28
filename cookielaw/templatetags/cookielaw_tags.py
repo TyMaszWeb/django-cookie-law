@@ -28,7 +28,8 @@ class CookielawBanner(InclusionTag):
 
         data = self.get_context(context, **kwargs)
 
-        if django.VERSION[:2] < (1, 10):
+        # Author made this 8 but since didn't pass guessing 9 might work better?
+        if django.VERSION[:2] < (1, 8):
             return render_to_string(template_filename, data, context_instance=context)
         else:
             return render_to_string(template_filename, data, context.request)
