@@ -24,7 +24,7 @@ class CookielawBanner(InclusionTag):
                           'Are you sure you have django.core.context_processors.request enabled?')
             return ''
 
-        if context['request'].COOKIES.get('cookielaw_accepted', False):
+        elif context['request'].COOKIES.get('cookielaw_accepted', False):
             return ''
 
         data = self.get_context(context, **kwargs)
@@ -32,6 +32,6 @@ class CookielawBanner(InclusionTag):
         if django.VERSION[:2] < (1, 10):
             return render_to_string(template_filename, data, context_instance=context)
         else:
-            return render_to_string(template_filename, data, context.request)
+            return render_to_string(template_filename, data, getattr(context, 'request', None))
 
 register.tag(CookielawBanner)
