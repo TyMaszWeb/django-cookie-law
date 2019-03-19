@@ -39,5 +39,6 @@ install:
   - pip install --upgrade pipenv
   - pipenv install $DJANGO
   - pipenv install .
+  - pipenv install --dev six pytest pytest-django pytest-selenium selenium
 script:
   - pipenv run python setup.py test
