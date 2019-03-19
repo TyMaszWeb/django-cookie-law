@@ -13,6 +13,8 @@ django_cookie_law.egg-info/
 /include
 /lib
 /pip-selfcheck.json
+/Pipfile
+/Pipfile.lock
 /.cache
 /.eggs
 /selenium

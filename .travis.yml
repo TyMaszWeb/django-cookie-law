@@ -36,8 +36,8 @@ cache:
   directories:
     - $HOME/.cache/pip
 install:
-  - pip install --upgrade pip
-  - pip install $DJANGO
-  - python setup.py develop
+  - pip install --upgrade pipenv
+  - pipenv install $DJANGO
+  - pipenv install .
 script:
-  - python setup.py test
+  - pipenv run python setup.py test
