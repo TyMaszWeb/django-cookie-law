@@ -28,7 +28,7 @@ Installation
 #. Run ``collectstatic`` (Django 1.3+) or copy the statics to your media directory
 #. Add ``cookielaw/js/cookielaw.js`` to the markup directly or via your asset
    manager such as ``django-pipeline`` or ``django-compressor``
-#. If you're using Django > 1.8, enable ``'django.core.context_processors.request'`` in your ``TEMPLATES['OPTIONS']`` setting, eg.:
+#. If you're using Django > 1.8, enable ``'django.template.context_processors.request'`` in your ``TEMPLATES['OPTIONS']`` setting, eg.:
 
     ::
 
