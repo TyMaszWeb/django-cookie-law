@@ -22,6 +22,7 @@ class CookielawBanner(InclusionTag):
         if 'request' not in context:
             warnings.warn('No request object in context. '
                           'Are you sure you have django.core.context_processors.request enabled?')
+            return ''
 
         if context['request'].COOKIES.get('cookielaw_accepted', False):
             return ''
