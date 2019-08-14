@@ -1,8 +1,7 @@
 *.pyc
 *.egg
 
-_build/
-_env/
+build/
 dist/
 django_cookie_law.egg-info/
 
@@ -17,6 +16,7 @@ django_cookie_law.egg-info/
 /Pipfile.lock
 /.cache
 /.eggs
+/.env
 /selenium
 /geckodriver.log
 /ghostdriver.log
