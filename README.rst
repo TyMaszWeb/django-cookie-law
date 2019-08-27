@@ -5,12 +5,10 @@ django-cookie-law
 .. image:: https://travis-ci.org/TyMaszWeb/django-cookie-law.svg?branch=master
    :target: https://travis-ci.org/TyMaszWeb/django-cookie-law
 
-django-cookie-law helps your Django project comply with the
-`EU cookie regulations <http://www.aboutcookies.org/default.aspx?page=3>`_.
-by displaying a cookie information banner until it is dismissed by the user.
+`django-cookie-law` will display a dismissable banner, making your users aware of cookies being used.
 
-.. warning:: The app can be incompatible with your local cookie
-             law regulations. Consult your lawyer when in doubt.
+.. warning:: This app is known to be **not** complaint with the United Kingdom PECR/GDPR.
+             It is your responsibility to find out whether `django-cookie-law` meets the specific local legal requirements.
 
 Contributions and comments are welcome using Github at:
 http://github.com/TyMaszWeb/django-cookie-law
