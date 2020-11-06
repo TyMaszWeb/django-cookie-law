@@ -2,8 +2,8 @@
 django-cookie-law
 ==================
 
-.. image:: https://travis-ci.org/TyMaszWeb/django-cookie-law.svg?branch=master
-   :target: https://travis-ci.org/TyMaszWeb/django-cookie-law
+.. image:: https://github.com/TyMaszWeb/django-cookie-law/workflows/build/badge.svg
+   :target: https://github.com/TyMaszWeb/django-cookie-law/actions
 
 `django-cookie-law` will display a dismissable banner, making your users aware of cookies being used.
 

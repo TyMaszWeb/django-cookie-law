@@ -15,21 +15,20 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cookielaw',
-    'cookielaw.test_project.test_app',
+    'test_proj.test_app',
 )
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
 )
-ROOT_URLCONF = 'cookielaw.test_project.urls'
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'cookielaw', 'static')
+ROOT_URLCONF = 'test_proj.urls'
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..',  'cookielaw', 'static')
 STATIC_URL = '/static/'
+
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            # insert your TEMPLATE_DIRS here
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
