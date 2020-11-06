@@ -1,0 +1,36 @@
+name: build
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    name: build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.9]
+        django: [<3.2]
+#        python: [3.6, 3.7, 3.8, 3.9]
+#        django: [<2.3, <3.1, <3.2]
+#        browser: [chrome, firefox]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install dependencies
+        run: |
+          sudo apt install -y google-chrome-stable firefox
+          pip install "Django${{ matrix.django }}"
+          pip install .
+          pip install six pytest pytest-django pytest-seleniumbase
+          seleniumbase install chromedriver
+          seleniumbase install geckodriver
+      - name: Test
+        working-directory: cookielaw/test_project
+        run: |
+          DJANGO_SETTINGS_MODULE=settings pytest tests/ --browser=chrome --headless

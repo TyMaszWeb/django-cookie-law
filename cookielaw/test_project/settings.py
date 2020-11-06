@@ -15,7 +15,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cookielaw',
-    'cookielaw.test_project.test_app',
+    'test_app',
 )
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
