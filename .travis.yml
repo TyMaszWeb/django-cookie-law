@@ -1,35 +1,34 @@
-sudo: false
 dist: xenial   # required for Python >= 3.7
+addons:
+  chrome: stable
+services:
+  - xvfb
 language: python
 python:
-  - "2.7"
-  - "3.5"
   - "3.6"
   - "3.7"
+  - "3.8"
+  - "3.9"
 env:
   global:
     - DJANGO_SETTINGS_MODULE=settings
   matrix:
-    - DJANGO="Django<1.12"
-    - DJANGO="Django<2.1"
-    - DJANGO="Django<2.2"
     - DJANGO="Django<2.3"
-matrix:
-  exclude:
-    # See: https://docs.djangoproject.com/en/1.11/faq/install/#what-python-version-can-i-use-with-django
-    - python: "2.7"
-      env: DJANGO="Django<2.1"
-    - python: "2.7"
-      env: DJANGO="Django<2.2"
-    - python: "2.7"
-      env: DJANGO="Django<2.3"
+    - DJANGO="Django<3.1"
+    - DJANGO="Django<3.2"
 cache:
   directories:
     - $HOME/.cache/pip
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 install:
   - pip install --upgrade pipenv
   - pipenv install $DJANGO
   - pipenv install .
   - pipenv install --dev six pytest pytest-django pytest-selenium selenium
+  - wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d ~/bin
+before_script:
+  - "export DISPLAY=:99.0"
 script:
   - pipenv run python setup.py test
