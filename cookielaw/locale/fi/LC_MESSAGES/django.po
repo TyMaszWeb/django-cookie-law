@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-12 13:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Jyri Hämäläinen <jyri ät poromagia.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: Finnish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/cookielaw/banner.html:5
+msgid "COOKIE_INFO_HEADER"
+msgstr "Evästehuomautus"
+
+#: templates/cookielaw/banner.html:7
+msgid "COOKIE_INFO_OK"
+msgstr "Selvä"
+
+#: templates/cookielaw/banner.html:8
+msgid "COOKIE_INFO_PARA"
+msgstr "Sivustomme tallentaa laitteellesi pieniä määriä tekstimuotoista dataa "
+"eli evästeitä (eng. cookie) tilastointitarkoituksiin ja voidaksemme tarjota "
+"parempaa sisältöä. Voit estää evästeiden käytön selaimesi asetuksista. "
+"Käyttämällä sivustoa muuttamatta selaimen asetuksia, annat meidän jatkaa "
+"tämän datan tallentamista laitteellesi."
