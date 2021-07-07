@@ -6,6 +6,6 @@
     <style type="text/css" src="{{ STATIC_URL }}cookielaw/css/cookielaw.css"></style>
 </head>
 <body>
-    {% rejectable_cookielaw_banner %}
+    {% if cookielaw.notset %}{% rejectable_cookielaw_banner %}{% endif %}
 </body>
 </html>

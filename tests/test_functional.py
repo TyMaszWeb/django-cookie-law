@@ -44,14 +44,14 @@ def test_text_is_not_rendered_unless_cookies_are_accepted(selenium, live_server)
         selenium.find_element_by_id('msg')
 
 
-def test_context_processors_puts_variable_into_context(selenium, live_server):
+def test_when_cookies_are_accepted(selenium, live_server):
     # accept cookies
     selenium.get(live_server.url)
     cookielaw_banner = selenium.find_element_by_id('CookielawBanner')
     cookielaw_banner.find_element_by_class_name('btn').click()
 
     # go to different page and test if context_processor filled the
-    # accepted_cookies variable
+    # cookielaw variable
     selenium.get(f'{live_server.url}/accepted')
     msg = selenium.find_element_by_id('msg')
     assert msg
@@ -69,13 +69,13 @@ def test_reject_cookies_hides_banner(selenium, live_server):
         selenium.find_element_by_id('CookielawBanner')
 
 
-def test_cookies_rejected_context_processor(selenium, live_server):
+def test_when_cookies_are_rejected(selenium, live_server):
     # load page with rejectable banner and click reject button
     selenium.get(f'{live_server.url}/rejectable')
     selenium.find_element_by_id('CookielawBanner').find_element_by_class_name('reject').click()
 
     # go to different page and test if context_processor filled the
-    # cookielaw_rejected variable
+    # cookielaw variable
     selenium.get(f'{live_server.url}/rejected')
     msg = selenium.find_element_by_id('msg')
     assert msg

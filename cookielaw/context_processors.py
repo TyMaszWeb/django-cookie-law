@@ -1,12 +1,12 @@
-def cookielaw_accepted(request):
-    """Add cookielaw_accepted context variable to the context."""
-    return {
-        'cookielaw_accepted': request.COOKIES.get('cookielaw_accepted') == '1'
-    }
 
+def cookielaw(request):
+    """Add cookielaw context variable to the context."""
 
-def cookielaw_rejected(request):
-    """Add cookielaw_rejected context variable to the context."""
+    cookie = request.COOKIES.get('cookielaw_accepted')
     return {
-        'cookielaw_rejected': request.COOKIES.get('cookielaw_accepted') == '0'
+        'cookielaw': {
+            'notset': cookie is None,
+            'accepted': cookie == '1',
+            'rejected': cookie == '0',
+        }
     }
