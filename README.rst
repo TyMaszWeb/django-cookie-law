@@ -94,6 +94,45 @@ to any of the ``TEMPLATE_DIRS``).
 To change the CSS, just write your own rules and don't include the default
 stylesheet.
 
+If you want your visitors to be able to reject the cookies, you should setup
+`cookielaw` context processor by adding it to `TEMPLATE_CONTEXT_PROCESSORS`
+like this:
+
+    ::
+
+        TEMPLATE_CONTEXT_PROCESSORS = (
+            ...
+            'cookielaw.context_processors.cookielaw'
+        )
+
+That will add ``cookielaw`` context variable to the template context. That
+variable is a dict with 3 keys: ``notset``, ``accepted`` and ``rejected``, each
+with ``true`` or ``false`` value.
+
+Instead of default ``banner.html`` template, use ``rejectable.html`` one which
+shows an example of how to reject the cookies (of course, you may change the
+template to suit your own needs, just take care that you have
+``<div id="CookielawBanner">`` container.
+
+In your templates, you can choose to display the banner only for new visitors
+(case when cookie is not set):
+
+    ::
+
+        {% load cookielaw_tags %}
+        {% if cookielaw.notset %}{% rejectable_cookielaw_banner %}{% endif %}
+
+Of course, you may use ``{% cookielaw_banner %}`` as well.
+
+Once the visitors accepts or rejects the cookies, you may choose to load or not
+load the analytics trackers:
+
+    ::
+
+        {% if cookielaw.accepted %}
+            ... the code to load tracker ...
+        {% endif %}
+
 Bugs & Contribution
 ===================
 
