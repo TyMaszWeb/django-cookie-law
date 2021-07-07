@@ -1,0 +1,11 @@
+{% load cookielaw_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="{{ STATIC_URL }}cookielaw/js/cookielaw.js"></script>
+    <style type="text/css" src="{{ STATIC_URL }}cookielaw/css/cookielaw.css"></style>
+</head>
+<body>
+    {% if cookielaw_accepted %}<p id="msg">Cookies are good.</p>{% endif %}
+</body>
+</html>

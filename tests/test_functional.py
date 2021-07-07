@@ -36,3 +36,23 @@ def test_banner_shows_and_hides_with_jquery(selenium, live_server):
     time.sleep(1)
     assert not cookielaw_banner.is_displayed()
     assert '1' == selenium.get_cookie('cookielaw_accepted')['value']
+
+
+def test_text_is_not_rendered_unless_cookies_are_accepted(selenium, live_server):
+    selenium.get(f'{live_server.url}/accepted')
+    with pytest.raises(NoSuchElementException):
+        selenium.find_element_by_id('msg')
+
+
+def test_context_processors_puts_variable_into_context(selenium, live_server):
+    # accept cookies
+    selenium.get(live_server.url)
+    cookielaw_banner = selenium.find_element_by_id('CookielawBanner')
+    cookielaw_banner.find_element_by_class_name('btn').click()
+
+    # go to different page and test if context_processor filled the
+    # accepted_cookies variable
+    selenium.get(f'{live_server.url}/accepted')
+    msg = selenium.find_element_by_id('msg')
+    assert msg
+    assert msg.text == 'Cookies are good.'
