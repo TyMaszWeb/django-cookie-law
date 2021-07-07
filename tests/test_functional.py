@@ -56,3 +56,27 @@ def test_context_processors_puts_variable_into_context(selenium, live_server):
     msg = selenium.find_element_by_id('msg')
     assert msg
     assert msg.text == 'Cookies are good.'
+
+
+def test_reject_cookies_hides_banner(selenium, live_server):
+    # load page with rejectable banner and click reject button
+    selenium.get(f'{live_server.url}/rejectable')
+    selenium.find_element_by_id('CookielawBanner').find_element_by_class_name('reject').click()
+
+    # reload the page and the banner should not be displayed
+    selenium.get(live_server.url)
+    with pytest.raises(NoSuchElementException):
+        selenium.find_element_by_id('CookielawBanner')
+
+
+def test_cookies_rejected_context_processor(selenium, live_server):
+    # load page with rejectable banner and click reject button
+    selenium.get(f'{live_server.url}/rejectable')
+    selenium.find_element_by_id('CookielawBanner').find_element_by_class_name('reject').click()
+
+    # go to different page and test if context_processor filled the
+    # cookielaw_rejected variable
+    selenium.get(f'{live_server.url}/rejected')
+    msg = selenium.find_element_by_id('msg')
+    assert msg
+    assert msg.text == 'Cookies are bad.'

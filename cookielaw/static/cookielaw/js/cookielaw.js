@@ -1,4 +1,6 @@
 var Cookielaw = {
+    ACCEPTED: '1',
+    REJECTED: '0',
 
     createCookie: function (name, value, days) {
         var date = new Date(),
@@ -12,14 +14,22 @@ var Cookielaw = {
         document.cookie = name + "=" + value + expires + "; path=/";
     },
 
-    createCookielawCookie: function () {
-        this.createCookie('cookielaw_accepted', '1', 10 * 365);
+    createCookielawCookie: function (cookieValue) {
+        cookieValue = cookieValue || this.ACCEPTED;
+        this.createCookie('cookielaw_accepted', cookieValue, 10 * 365);
 
         if (typeof (window.jQuery) === 'function') {
             jQuery('#CookielawBanner').slideUp();
         } else {
             document.getElementById('CookielawBanner').style.display = 'none';
         }
-    }
+    },
 
+    accept: function () {
+        this.createCookielawCookie(this.ACCEPTED);
+    },
+
+    reject: function () {
+          this.createCookielawCookie(this.REJECTED);
+    }
 };

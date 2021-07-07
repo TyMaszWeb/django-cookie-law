@@ -34,4 +34,11 @@ class CookielawBanner(InclusionTag):
         else:
             return render_to_string(template_filename, data, getattr(context, 'request', None))
 
+class RejectableCookielawBanner(CookielawBanner):
+        """Displays cookie law banner with options to accept or reject cookies."""
+
+        template = 'cookielaw/rejectable.html'
+
+
 register.tag(CookielawBanner)
+register.tag(RejectableCookielawBanner)
