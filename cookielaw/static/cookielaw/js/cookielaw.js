@@ -2,7 +2,7 @@ var Cookielaw = {
     ACCEPTED: '1',
     REJECTED: '0',
 
-    createCookie: function (name, value, days) {
+    createCookie: function (name, value, days, secure=true) {
         var date = new Date(),
             expires = '';
         if (days) {
@@ -11,12 +11,18 @@ var Cookielaw = {
         } else {
             expires = "";
         }
-        document.cookie = name + "=" + value + expires + "; path=/";
+        
+        var secureString = "";
+        if (window.isSecureContext && secure) {
+            secureString = "; Secure";
+        }
+        
+        document.cookie = name + "=" + value + expires + "; path=/" + secureString;
     },
 
-    createCookielawCookie: function (cookieValue) {
+    createCookielawCookie: function (cookieValue, secure=true) {
         cookieValue = cookieValue || this.ACCEPTED;
-        this.createCookie('cookielaw_accepted', cookieValue, 10 * 365);
+        this.createCookie('cookielaw_accepted', cookieValue, 10 * 365, secure);
 
         if (typeof (window.jQuery) === 'function') {
             jQuery('#CookielawBanner').slideUp();
