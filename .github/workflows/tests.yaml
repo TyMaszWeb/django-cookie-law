@@ -23,7 +23,12 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-${{ matrix.python }}-${{ matrix.django }}-${{ hashFiles('.github/**/*.yaml') }}
+          key: pip-${{ runner.os }}-${{ matrix.python }}-${{ matrix.django }}-${{ hashFiles('.github/**/*.yaml') }}
+      - name: Setup Pipenv Cache
+        uses: actions/cache@v2
+        with:
+          path: /home/runner/.local/share/virtualenvs
+          key: pipenv-${{ runner.os }}-${{ matrix.python }}-${{ matrix.django }}-${{ hashFiles('.github/**/*.yaml') }}
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
