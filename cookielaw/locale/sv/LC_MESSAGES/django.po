@@ -32,7 +32,7 @@ msgstr ""
 "kunna förse dig med bättre innehåll och för statistiska syften. Du kan avaktivera "
 "användningen av cookies genom att ändra inställningarna i din webbläsare. "
 "Genom att godkänna här till höger ger du oss tillstånd att spara den informationen "
-"på din enhet."
+"på din enhet. Våra villkor: shorturl.at/guFQR"
 
 #: templates/cookielaw/rejectable.html:8
 msgid "COOKIE_INFO_REJECT"
