@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.2.0
+-----
+
+* Removes any jQuery code from this project's JavaScript
+
+
 2.0.0
 -----
 
