@@ -26,7 +26,7 @@ var Cookielaw = {
   },
 
   hideCookielawBanner: function () {
-    document.getElementById('CookielawBanner').style.display = 'none';
+    document.getElementById('CookielawBanner').remove();
   },
 
   accept: function () {

@@ -5,7 +5,6 @@ from classytags.helpers import InclusionTag
 from django import template
 from django.template.loader import render_to_string
 
-
 register = template.Library()
 
 
@@ -14,30 +13,35 @@ class CookielawBanner(InclusionTag):
     Displays cookie law banner only if user has not dismissed it yet.
     """
 
-    template = 'cookielaw/banner.html'
+    template = "cookielaw/banner.html"
 
     def render_tag(self, context, **kwargs):
         template_filename = self.get_template(context, **kwargs)
 
-        if 'request' not in context:
-            warnings.warn('No request object in context. '
-                          'Are you sure you have django.core.context_processors.request enabled?')
-            return ''
+        if "request" not in context:
+            warnings.warn(
+                "No request object in context. "
+                "Are you sure you have django.core.context_processors.request enabled?"
+            )
+            return ""
 
-        elif context['request'].COOKIES.get('cookielaw_accepted', False):
-            return ''
+        elif context["request"].COOKIES.get("cookielaw_accepted", False):
+            return ""
 
         data = self.get_context(context, **kwargs)
 
         if django.VERSION[:2] < (1, 10):
             return render_to_string(template_filename, data, context_instance=context)
         else:
-            return render_to_string(template_filename, data, getattr(context, 'request', None))
+            return render_to_string(
+                template_filename, data, getattr(context, "request", None)
+            )
+
 
 class RejectableCookielawBanner(CookielawBanner):
-        """Displays cookie law banner with options to accept or reject cookies."""
+    """Displays cookie law banner with options to accept or reject cookies."""
 
-        template = 'cookielaw/rejectable.html'
+    template = "cookielaw/rejectable.html"
 
 
 register.tag(CookielawBanner)
