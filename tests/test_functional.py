@@ -26,18 +26,6 @@ def test_banner_shows_and_hides(selenium, live_server):
         selenium.find_element_by_id('CookielawBanner')
 
 
-def test_banner_shows_and_hides_with_jquery(selenium, live_server):
-    # now, with jQuery
-    selenium.get('{}/?jquery=1'.format(live_server.url))
-    cookielaw_banner = selenium.find_element_by_id('CookielawBanner')
-
-    # on click of the button, cookie set and banner hidden
-    cookielaw_banner.find_element_by_class_name('btn').click()
-    time.sleep(1)
-    assert not cookielaw_banner.is_displayed()
-    assert '1' == selenium.get_cookie('cookielaw_accepted')['value']
-
-
 def test_text_is_not_rendered_unless_cookies_are_accepted(selenium, live_server):
     selenium.get(f'{live_server.url}/accepted')
     with pytest.raises(NoSuchElementException):
