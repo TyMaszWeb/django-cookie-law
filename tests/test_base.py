@@ -6,11 +6,7 @@ from django.utils.translation import gettext as _
 @pytest.fixture()
 def content(client):
     response = client.get('/')
-    assert 200 == response.status_code
-
-    if isinstance(response.content, six.binary_type):
-        return response.content.decode('utf-8')  # py3 comapt
-
+    assert response.status_code == 200
     return response.content
 
 
