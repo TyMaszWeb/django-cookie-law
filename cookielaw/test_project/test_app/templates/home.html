@@ -12,6 +12,20 @@
 
 <body>
 <script type="text/javascript" src="{{ STATIC_URL }}cookielaw/js/cookielaw.js"></script>
+
+{% cookielaw_banner %}
+
+<main>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vestibulum eu sem dictum, viverra enim at, iaculis nunc.
+        Aliquam posuere pulvinar ex vitae venenatis.
+        Nunc pellentesque, odio at malesuada feugiat, nunc turpis tincidunt orci, id cursus risus nisl nec mauris.
+        Praesent vitae ligula ipsum. Curabitur commodo ante dapibus diam rutrum ultricies.
+    </p>
+</main>
+
 {% if request.GET.jquery %}
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" crossorigin="anonymous"></script>
 {% endif %}
