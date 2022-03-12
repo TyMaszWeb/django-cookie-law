@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-07 11:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/cookielaw/banner.html:5 templates/cookielaw/rejectable.html:5
+msgid "COOKIE_INFO_HEADER"
+msgstr "Cookies meddelande"
+
+#: templates/cookielaw/banner.html:7 templates/cookielaw/rejectable.html:7
+msgid "COOKIE_INFO_OK"
+msgstr "Jag godkänner"
+
+#: templates/cookielaw/banner.html:8 templates/cookielaw/rejectable.html:9
+msgid "COOKIE_INFO_PARA"
+msgstr ""
+"Vår sida sparar en liten bit text-information (cookies) på din enhet för att "
+"kunna förse dig med bättre innehåll och för statistiska syften. Du kan avaktivera "
+"användningen av cookies genom att ändra inställningarna i din webbläsare. "
+"Genom att godkänna här till höger ger du oss tillstånd att spara den informationen "
+"på din enhet. Våra villkor: <a href='https://www.kontorshund.se/privacy/'>https://www.kontorshund.se/privacy/</a>"
+
+#: templates/cookielaw/rejectable.html:8
+msgid "COOKIE_INFO_REJECT"
+msgstr "Jag avvisar"
