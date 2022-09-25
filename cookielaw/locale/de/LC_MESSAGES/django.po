@@ -33,3 +33,7 @@ msgstr ""
 "speichert diese Website Cookies auf Ihrem Gerät. Das Speichern von Cookies "
 "kann in den Browser-Einstellungen deaktiviert werden. Wenn Sie die Website "
 "weiter nutzen, stimmen Sie der Verwendung von Cookies zu."
+
+#: templates/cookielaw/rejectable.html:8
+msgid "COOKIE_INFO_REJECT"
+msgstr "Nicht akzeptieren"
