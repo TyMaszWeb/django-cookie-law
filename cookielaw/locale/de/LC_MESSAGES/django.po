@@ -20,7 +20,7 @@ msgstr ""
 
 #: templates/cookielaw/banner.html:5
 msgid "COOKIE_INFO_HEADER"
-msgstr "Cookie Warnung"
+msgstr "Cookie-Warnung"
 
 #: templates/cookielaw/banner.html:7
 msgid "COOKIE_INFO_OK"
